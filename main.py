@@ -10,17 +10,26 @@ it = util.Iterator(board)
 it.start()
 
 #Declaração de variáveis
-player = player()
-sens_inicio = sensor()
-sens_morte = sensor()
-sens1 = sensor()
-sens2 = sensor()
+player = Player()
+sens_inicio = Sensor()
+sens_morte = Sensor()
+sens0 = Sensor()
+sens1 = Sensor()
+sens2 = Sensor()
+sens3 = Sensor()
+sens4 = Sensor()
+sens5 = Sensor()
+sens6 = Sensor()
+sens7 = Sensor()
 
 #Execução do jogo
 while True:
   telaInicial()#Exibe tela inicial até o lançamento da bola
   telaJogo()
   while True:
+    if (sens0.status() == 1):
+      player.pontuar(sens0.valor)
+      telaJogo()
     if (sens1.status() == 1):
       player.pontuar(sens1.valor)
       telaJogo()
@@ -41,9 +50,6 @@ while True:
       telaJogo()
     if (sens7.status() == 1):
       player.pontuar(sens7.valor)
-      telaJogo()
-    if (sens8.status() == 1):
-      player.pontuar(sens8.valor)
       telaJogo()
     if (sens_morte.status() == 1):
       player.morrer()
