@@ -53,7 +53,10 @@ while True:
       telaJogo()
     if (sens_morte.status() == 1):
       player.morrer()
-      break
+      if (player.vidas == 0):
+        break
+      else:
+        telaTransicao(self.vidas)
   telaFinal()
   
 def telaInicial():  
@@ -61,5 +64,9 @@ def telaInicial():
     #Plotar gráficos da tela inicial
     
 def telaJogo():
+  
+def telaTransicao(vidas):
+  
+def telaFinal():
   
       
