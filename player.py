@@ -6,14 +6,17 @@ class Player:
 		
 	def pontuar(self, pontos): #Aumentar pontuação
 		self.pontuação += pontos
+		#Ideias:
 		#Se a pontuação exceder x tocamos uma músicas ou exibimos algo na tela
 		#COCOCOCCOOMBOBREAKER
 		
 	def morrer(self): #Perder uma vida
 		self.vidas -= 1
-		if (self.vidas==0):
+		if (self.vidas==0): #Caso as vidas cheguem em 0 o jogo reseta
 			self.nomear()
 			self.__init__()
+		#Ideia: caso o player demore demais para jogar a próxima vida, o jogo reseta
 			
 	def nomear(self):
-		#to-do
+		#to-do: definir a função em que o player coloca seu nome no scoreboard
+		#É preciso a interface gráfica da Luana&Mateus
