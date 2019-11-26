@@ -1,11 +1,3 @@
-from pyfirmata import Arduino, util, INPUT, OUTPUT
-from time import sleep
-
-board = Arduino('/dev/ttyACM0', baudrate = 250000)
-sleep(5)
-it = util.Iterator(board)
-it.start()
-
 class Sensor:
 	def __init__(self, pin, valor):
 		self.pin = board.get_pin('a:{0}:i'.format(pin))
