@@ -1,4 +1,15 @@
+from pyfirmata import Arduino, util, INPUT, OUTPUT
+from time import sleep
+from player import Player
+from arduino import Sensor
+
 #Setup
+board = Arduino('/dev/ttyACM0', baudrate = 250000)
+sleep(5)
+it = util.Iterator(board)
+it.start()
+
+#Declaração de variáveis
 player = player()
 sens_inicio = sensor()
 sens_morte = sensor()
