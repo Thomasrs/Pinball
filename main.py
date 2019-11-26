@@ -1,10 +1,8 @@
 #Setup
 player = player()
-sensor_inicio #Sensor de início de jogo
-sensor_pontuacao #Sensor genérico de pontuação
-sensor_pontuacao1
-sensor_pontuacao2
-sensor_pontuacao3
+sens_inicio = sensor()
+sens1 = sensor()
+sens2 = sensor()
 
 #Execução do jogo
 while True:
