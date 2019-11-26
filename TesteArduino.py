@@ -1,7 +1,7 @@
 from pyfirmata import Arduino, util, INPUT, OUTPUT
 from time import sleep
 
-board = Arduino('/dev/ttyACM0')
+board = Arduino('/dev/ttyACM0', baudrate = 250000)
 sleep(5)
 
 print("inicio")
@@ -13,10 +13,10 @@ sleep(1)
 
 pontuacao = 0
 while 1:
-	
-	if(pin1.read() > 500):
+
+	print(pin1.read())	
+	sleep(0.01)
+	if(pin1.read() > 0.500):
 		pontuacao += 1
 		sleep(0.05)
 		print(pontuacao)
-	
-
