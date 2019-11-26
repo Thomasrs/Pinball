@@ -11,16 +11,16 @@ it.start()
 
 #Declaração de variáveis
 player = Player()
-sens_inicio = Sensor()
-sens_morte = Sensor()
-sens0 = Sensor()
-sens1 = Sensor()
-sens2 = Sensor()
-sens3 = Sensor()
-sens4 = Sensor()
-sens5 = Sensor()
-sens6 = Sensor()
-sens7 = Sensor()
+sens_inicio = Sensor(pin, valor)
+sens_morte = Sensor(pin, valor)
+sens0 = Sensor(pin, valor)
+sens1 = Sensor(pin, valor)
+sens2 = Sensor(pin, valor)
+sens3 = Sensor(pin, valor)
+sens4 = Sensor(pin, valor)
+sens5 = Sensor(pin, valor)
+sens6 = Sensor(pin, valor)
+sens7 = Sensor(pin, valor)
 
 #Execução do jogo
 while True:
