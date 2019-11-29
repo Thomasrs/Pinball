@@ -1,11 +1,11 @@
 class Sensor:
 	def __init__(self, pin, valor):
-		self.pin = board.get_pin('a:{0}:i'.format(pin))
+		self.pin = board.get_pin('d:{0}:i'.format(pin))
 		self.valor = valor
 		self.pin.enable_reporting
 		sleep(0.05)
 	def status(self):
-		if(self.pin.read() > 0.500):
+		if(self.pin.read() == 1:
 			return 1
 		else:
 			return 0
